@@ -19,6 +19,7 @@ namespace Registration
             var logPath = Path.Combine(Directory.GetCurrentDirectory(), "Logs");
             NLog.GlobalDiagnosticsContext.Set("logDirectory", logPath);
             var logger = NLogBuilder.ConfigureNLog("NLog.config").GetCurrentClassLogger();
+
             try
             {
                 logger.Info("Application Starting Up");

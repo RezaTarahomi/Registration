@@ -58,7 +58,7 @@ namespace Registration
                     var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
                     if (contextFeature != null)
                     {
-                        Log.Error($"Something Went Wrong in the {contextFeature.Error}");
+                        NLog.Fluent.Log.Error($"Something Went Wrong in the {contextFeature.Error}");
 
                         await context.Response.WriteAsync(new Error
                         {

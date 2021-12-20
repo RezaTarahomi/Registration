@@ -18,6 +18,7 @@ namespace Registration.Data
         public DatabaseContext(DbContextOptions options) : base(options)
         { }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Log> Logs { get; set; }
         
         protected override void OnModelCreating(ModelBuilder builder)
         {
